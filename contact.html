@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines character encoding and mobile responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description displayed by search engines -->
+    <meta name="description" content="Contact Ubuntu BuildTech Construction for professional construction services.">
+
+    <!-- Website page title -->
+    <title>Contact Us | Ubuntu BuildTech Construction</title>
+
+    <!-- Website favicon and external CSS stylesheet -->
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER: Displays the company logo, name and tagline -->
+    <header class="site-header">
+
+        <!-- Clicking the logo takes visitors to the homepage -->
+        <a href="index.html">
+            <img src="images/logo.jpeg"
+                 alt="Ubuntu BuildTech Logo"
+                 class="logo">
+        </a>
+
+        <!-- Company name and slogan -->
+        <h1>Ubuntu BuildTech Construction (Pty) Ltd</h1>
+        <p class="tagline">Built on Quality, Driven by Excellence</p>
+
+    </header>
+
+    <!-- NAVIGATION: Links to the main website pages -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT: Contains the contact information and enquiry form -->
+    <main>
+
+        <!-- CONTACT DETAILS SECTION -->
+        <section class="content-section reveal">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question or a construction project in mind?
+                We would love to hear from you.
+            </p>
+
+            <!-- Company contact information -->
+            <div class="contact-details">
+
+                <!-- Email link opens the visitor's email application -->
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@ubuntubuildtech.co.za">
+                        info@ubuntubuildtech.co.za
+                    </a>
+                </p>
+
+                <!-- Company location -->
+                <p>
+                    <strong>Location:</strong>
+                    Johannesburg, Gauteng, South Africa
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ENQUIRY FORM SECTION -->
+        <section class="content-section reveal">
+
+            <h2>Send Us an Enquiry</h2>
+
+            <!-- Form collects contact information and the visitor's message -->
+            <form id="contactForm">
+
+                <!-- Visitor's full name -->
+                <label for="name">Full Name</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your full name"
+                       required>
+
+                <!-- Visitor's email address -->
+                <label for="email">Email Address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+
+                <!-- Subject of the enquiry -->
+                <label for="subject">Subject</label>
+                <input type="text"
+                       id="subject"
+                       name="subject"
+                       placeholder="Enter your subject"
+                       required>
+
+                <!-- Main enquiry message -->
+                <label for="message">Your Message</label>
+                <textarea id="message"
+                          name="message"
+                          rows="6"
+                          placeholder="Write your enquiry here..."
+                          required></textarea>
+
+                <!-- Submits the enquiry form -->
+                <button type="submit" class="btn">
+                    Send Enquiry
+                </button>
+
+                <!-- Displays form feedback to the visitor -->
+                <p id="formMessage" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <!-- FOOTER: Displays copyright and company contact information -->
+    <footer class="footer">
+
+        <!-- JavaScript can automatically insert the current year -->
+        <p>
+            &copy; <span class="current-year"></span>
+            Ubuntu BuildTech Construction. All rights reserved.
+        </p>
+
+        <!-- Company email address -->
+        <p>
+            Email:
+            <a href="mailto:info@ubuntubuildtech.co.za">
+                info@ubuntubuildtech.co.za
+            </a>
+        </p>
+
+        <!-- Website project identification -->
+        <p>Website Project: Ubuntu BuildTech Construction</p>
+
+    </footer>
+
+</body>
+</html>
