@@ -1,0 +1,763 @@
+/* =========================================
+   UBUNTU BUILDTECH CONSTRUCTION
+   Main Website Stylesheet
+   Controls the appearance of all website pages
+========================================= */
+
+
+/* =========================================
+   1. GLOBAL RESET
+   Removes default browser spacing and
+   makes element sizing easier to control
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enables smooth scrolling between page sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sets the default font, background, text colour and spacing */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F9FC;
+    color: #333333;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   2. HEADER
+   Styles the company logo, heading and tagline
+========================================= */
+
+.site-header {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 25px 20px;
+    border-bottom: 4px solid #F57C00;
+}
+
+/* Controls the company logo's size and shape */
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Styles the main company heading */
+.site-header h1 {
+    color: #163A5F;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+/* Styles the company slogan */
+.tagline {
+    color: #F57C00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   3. NAVIGATION
+   Styles the main navigation menu
+========================================= */
+
+.navbar {
+    background-color: #163A5F;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Arranges navigation links horizontally */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Controls individual navigation items */
+.navbar li {
+    display: inline-block;
+}
+
+/* Styles the navigation links */
+.navbar a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 16px 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Changes the link background when hovered or active */
+.navbar a:hover,
+.navbar a.active {
+    background-color: #F57C00;
+    color: #FFFFFF;
+}
+
+/* Highlights the currently selected page */
+.navbar a[aria-current="page"] {
+    background-color: #F57C00;
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   4. MOBILE MENU BUTTON
+   Controls the menu button displayed on
+   smaller screens
+========================================= */
+
+.menu-toggle {
+    display: none;
+    width: 100%;
+    padding: 14px;
+    background-color: #163A5F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   5. MAIN CONTENT
+   Controls the overall page content width
+   and spacing
+========================================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Adds spacing between page sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Styles the main white content containers */
+.content-section {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Adds spacing below paragraphs in content sections */
+.content-section p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   6. HEADINGS
+   Defines the appearance of headings
+   throughout the website
+========================================= */
+
+h2 {
+    color: #163A5F;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-left: 5px solid #F57C00;
+    padding-left: 12px;
+}
+
+/* Styles smaller section headings */
+h3 {
+    color: #163A5F;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   7. HERO SECTION
+   Styles the main homepage banner, image
+   and introductory text
+========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #163A5F;
+}
+
+/* Controls the large homepage background image */
+.hero-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.65;
+}
+
+/* Positions the text over the hero image */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    max-width: 650px;
+}
+
+/* Styles the hero section heading */
+.hero-content h2 {
+    color: #FFFFFF;
+    border: none;
+    padding: 0;
+    font-size: 36px;
+}
+
+/* Adds spacing below the hero description */
+.hero-content p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   8. BUTTONS
+   Provides consistent styling for buttons
+   and call-to-action links
+========================================= */
+
+.btn {
+    display: inline-block;
+    background-color: #F57C00;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Changes button colour when hovered */
+.btn:hover {
+    background-color: #163A5F;
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   9. SERVICES
+   Controls the service grid and service cards
+========================================= */
+
+/* Displays service cards in two columns */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Styles each individual service card */
+.service-card {
+    background-color: #F7F9FC;
+    border-left: 4px solid #F57C00;
+    padding: 22px;
+    border-radius: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Adds a lifting effect when hovering over a card */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Removes unnecessary bottom spacing from card paragraphs */
+.service-card p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   10. PROJECTS
+   Styles the project grid, images and cards
+========================================= */
+
+/* Displays project cards in two columns */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Styles each project card */
+.project-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Controls project image dimensions */
+.project-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+/* Slightly enlarges the project image on hover */
+.project-card:hover .project-image {
+    transform: scale(1.04);
+}
+
+/* Adds spacing around project descriptions */
+.project-info {
+    padding: 22px;
+}
+
+
+/* =========================================
+   11. CALL TO ACTION
+   Styles sections encouraging visitors
+   to contact the company
+========================================= */
+
+.call-to-action {
+    background-color: #163A5F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 8px;
+}
+
+/* Styles the call-to-action heading */
+.call-to-action h2 {
+    color: #FFFFFF;
+    border: none;
+    padding: 0;
+}
+
+/* Adds spacing below the call-to-action paragraph */
+.call-to-action p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   12. CONTACT PAGE
+   Styles company contact information
+========================================= */
+
+.contact-details {
+    margin-top: 25px;
+}
+
+/* Styles email links in the contact details */
+.contact-details a {
+    color: #F57C00;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   13. CONTACT FORM
+   Controls the layout and appearance of
+   the contact form fields
+========================================= */
+
+/* Arranges form elements vertically */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 650px;
+}
+
+/* Styles form labels */
+#contactForm label {
+    font-weight: bold;
+    color: #163A5F;
+}
+
+/* Styles text inputs and message textarea */
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Highlights form fields when selected */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #F57C00;
+    box-shadow: 0 0 5px rgba(245, 124, 0, 0.3);
+}
+
+/* Allows visitors to resize the message field vertically */
+#contactForm textarea {
+    resize: vertical;
+}
+
+/* Aligns the submit button to the left */
+#contactForm .btn {
+    align-self: flex-start;
+}
+
+/* Styles the message displayed after form submission */
+#formMessage {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   14. FOOTER
+   Styles the bottom section of every page
+========================================= */
+
+.footer {
+    background-color: #163A5F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 20px;
+}
+
+/* Controls footer paragraph spacing and text size */
+.footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Styles footer email links */
+.footer a {
+    color: #F57C00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Changes footer link colour on hover */
+.footer a:hover {
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   15. SCROLL REVEAL ANIMATION
+   Makes selected sections appear smoothly
+   as visitors scroll down the page
+========================================= */
+
+/* Initial hidden state of reveal elements */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Visible state applied by JavaScript */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   16. IMAGE LOADING SKELETON
+   Displays an animated placeholder while
+   images are loading
+========================================= */
+
+.image-loading {
+    background: linear-gradient(
+        90deg,
+        #E5E7EB 25%,
+        #F7F9FC 50%,
+        #E5E7EB 75%
+    );
+
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+/* Defines the movement of the skeleton animation */
+@keyframes skeleton-loading {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: -200% 0;
+    }
+}
+
+
+/* =========================================
+   17. BACK TO TOP BUTTON
+   Styles the button that takes visitors
+   back to the top of the page
+========================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #F57C00;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+/* Makes the button visible when JavaScript adds the show class */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Changes button colour when hovered */
+.back-to-top:hover {
+    background-color: #163A5F;
+}
+
+
+/* =========================================
+   18. SCROLLBAR
+   Customises the browser scrollbar appearance
+========================================= */
+
+/* Controls scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Styles the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #E4942B;
+}
+
+/* Styles the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #3E4D91;
+    border-radius: 10px;
+}
+
+/* Changes scrollbar handle colour on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #024EDA;
+}
+
+
+/* =========================================
+   19. TABLET RESPONSIVENESS
+   Adjusts the layout for screens up to 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Reduces the company heading size */
+    .site-header h1 {
+        font-size: 25px;
+    }
+
+    /* Hides the navigation links until the menu is opened */
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    /* Displays navigation links when JavaScript adds the show class */
+    .navbar ul.show {
+        display: flex;
+    }
+
+    /* Makes each navigation item fill the available width */
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjusts navigation link spacing */
+    .navbar a {
+        padding: 13px;
+    }
+
+    /* Displays the mobile menu button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Reduces main content spacing */
+    main {
+        padding: 25px 15px;
+    }
+
+    /* Adjusts the homepage hero image height */
+    .hero-image {
+        height: 330px;
+    }
+
+    /* Reduces the hero heading size */
+    .hero-content h2 {
+        font-size: 27px;
+    }
+
+    /* Changes service and project grids to one column */
+    .service-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjusts project image height */
+    .project-image {
+        height: 260px;
+    }
+
+    /* Reduces section heading size */
+    h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================
+   20. MOBILE RESPONSIVENESS
+   Further adjusts the layout for screens
+   up to 480px wide
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    /* Reduces header spacing */
+    .site-header {
+        padding: 20px 10px;
+    }
+
+    /* Reduces company logo size */
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Reduces company heading size */
+    .site-header h1 {
+        font-size: 21px;
+    }
+
+    /* Reduces tagline size */
+    .tagline {
+        font-size: 14px;
+    }
+
+    /* Adjusts hero image height */
+    .hero-image {
+        height: 280px;
+    }
+
+    /* Adjusts hero content positioning */
+    .hero-content {
+        left: 6%;
+        right: 6%;
+    }
+
+    /* Reduces hero heading size */
+    .hero-content h2 {
+        font-size: 23px;
+    }
+
+    /* Reduces hero paragraph size */
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    /* Reduces content section padding */
+    .content-section {
+        padding: 18px;
+    }
+
+    /* Reduces project image height */
+    .project-image {
+        height: 220px;
+    }
+
+    /* Makes buttons slightly smaller */
+    .btn {
+        padding: 10px 18px;
+    }
+
+    /* Adjusts the back-to-top button position and size */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+
+/* =========================================
+   21. ACCESSIBILITY
+   Improves keyboard navigation and supports
+   visitors who prefer reduced motion
+========================================= */
+
+/* Adds a visible outline when navigating with a keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #F57C00;
+    outline-offset: 3px;
+}
+
+/* Reduces animations for visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Keeps reveal content visible without animation */
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
